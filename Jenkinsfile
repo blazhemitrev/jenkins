@@ -7,10 +7,19 @@ pipeline {
   }
   stages {
     stage('Build') {
-      steps {
-        echo 'Building..'
-        echo 'editing ....'
-        sh 'echo "setting env"'
+      parallel {
+        stage('Build') {
+          steps {
+            echo 'Building..'
+            echo 'editing ....'
+            sh 'echo "setting env"'
+          }
+        }
+        stage('post build') {
+          steps {
+            echo 'test'
+          }
+        }
       }
     }
     stage('Test') {
