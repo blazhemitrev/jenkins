@@ -7,31 +7,25 @@ pipeline {
   }
   stages {
     stage('Build') {
-      parallel {
-        stage('Build') {
-          steps {
-            echo 'Building..'
-            echo 'editing ....'
-            sh 'echo "setting env"'
-          }
-        }
-        stage('post build') {
-          steps {
-            echo 'test'
-          }
-        }
+      steps {
+        echo 'Building..'
+        echo 'editing ....'
+        sh 'echo "setting env"'
       }
     }
+
     stage('Test') {
       steps {
         echo 'Testing..'
       }
     }
+
     stage('Deploy') {
       steps {
         echo 'Deploying....'
       }
     }
+
   }
   environment {
     PATH = '/usr/local/bin:$PATH'
