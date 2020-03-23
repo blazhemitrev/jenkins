@@ -1,0 +1,19 @@
+#You have to install rbac-manager (from helm/stable repo) before you are able to use this kind of Kubernetes objects
+apiVersion: rbacmanager.reactiveops.io/v1beta1
+kind: RBACDefinition
+metadata:
+  name: edit-access-for-developers
+rbacBindings:
+  - name: developers
+    subjects:
+      - kind: User
+        name: valid-email-address (the same email addr for the user that are already part of IAM service...)
+      - kind: User
+        name: valid-email-address (the same email addr for the user that are already part of IAM service...)
+    roleBindings:
+      - namespace: develop
+        clusterRole: developers-cr (you will have to create your clusteRole first, if you want everything to works as expected)
+      - namespace: staging
+        clusterRole: developers-cr
+      - namespace: production
+        clusterRole: developers-cr
