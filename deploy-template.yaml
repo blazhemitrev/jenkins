@@ -2,17 +2,11 @@ apiVersion: extensions/v1beta1
 kind: Deployment
 metadata:
   annotations:
-    deployment.kubernetes.io/revision: "143"
-  creationTimestamp: "2020-02-18T11:10:54Z"
-  generation: 143
   labels:
     app: sg-develop
     redis-client: "true"
   name: sg-develop
   namespace: develop
-  resourceVersion: "18541469"
-  selfLink: /apis/extensions/v1beta1/namespaces/develop/deployments/sg-develop
-  uid: 1c41a7dc-31b2-4026-ba3b-e65c91f96ea4
 spec:
   progressDeadlineSeconds: 600
   replicas: 1
@@ -223,22 +217,3 @@ spec:
       volumes:
       - emptyDir: {}
         name: media
-status:
-  availableReplicas: 1
-  conditions:
-  - lastTransitionTime: "2020-02-18T11:10:55Z"
-    lastUpdateTime: "2020-02-18T11:10:55Z"
-    message: Deployment has minimum availability.
-    reason: MinimumReplicasAvailable
-    status: "True"
-    type: Available
-  - lastTransitionTime: "2020-03-16T09:08:20Z"
-    lastUpdateTime: "2020-03-20T10:37:06Z"
-    message: ReplicaSet "sg-develop-79944cf66b" has successfully progressed.
-    reason: NewReplicaSetAvailable
-    status: "True"
-    type: Progressing
-  observedGeneration: 143
-  readyReplicas: 1
-  replicas: 1
-  updatedReplicas: 1
