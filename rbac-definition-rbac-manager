@@ -7,12 +7,14 @@ rbacBindings:
   - name: developers
     subjects:
       - kind: User
-        name: valid-email-address (the same email addr for the user that are already part of IAM service...)
+      #the same email addr for the user that are already part of IAM service...
+        name: valid-email-address 
       - kind: User
-        name: valid-email-address (the same email addr for the user that are already part of IAM service...)
+        name: valid-email-address 
     roleBindings:
       - namespace: develop
-        clusterRole: developers-cr (you will have to create your clusteRole first, if you want everything to works as expected)
+      #you will have to create your clusteRole first, if you want everything to works as expected
+        clusterRole: developers-cr 
       - namespace: staging
         clusterRole: developers-cr
       - namespace: production
