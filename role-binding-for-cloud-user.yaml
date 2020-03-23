@@ -5,7 +5,7 @@ metadata:
   namespace: develop
 subjects:
 - kind: User
-#the same email addr for the user that are already part of IAM service...
+#the same email addr for that user that are already part of IAM service...
   name: email_addr
   apiGroup: rbac.authorization.k8s.io
 roleRef:
