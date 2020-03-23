@@ -7,7 +7,7 @@ rbacBindings:
   - name: developers
     subjects:
       - kind: User
-      #the same email addr for the user that are already part of IAM service...
+      #the same email addr for that user that are already part of IAM service...
         name: valid-email-address 
       - kind: User
         name: valid-email-address 
