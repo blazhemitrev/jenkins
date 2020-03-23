@@ -5,7 +5,8 @@ metadata:
   namespace: develop
 subjects:
 - kind: User
-  name: name.surname@domain
+#the same email addr for the user that are already part of IAM service...
+  name: email_addr
   apiGroup: rbac.authorization.k8s.io
 roleRef:
   kind: ClusterRole
