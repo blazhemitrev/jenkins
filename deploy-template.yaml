@@ -78,7 +78,7 @@ spec:
             secretKeyRef:
               key: redis-host
               name: sg-secret
-        image: eu.gcr.io/calcium-range-262011/sgeip-develop:99
+        image: <image-name>
         imagePullPolicy: IfNotPresent
         livenessProbe:
           failureThreshold: 3
@@ -168,7 +168,7 @@ spec:
             secretKeyRef:
               key: redis-host
               name: sg-secret
-        image: eu.gcr.io/calcium-range-262011/sgeip-develop:99
+        image: <image-name>
         imagePullPolicy: IfNotPresent
         livenessProbe:
           failureThreshold: 3
