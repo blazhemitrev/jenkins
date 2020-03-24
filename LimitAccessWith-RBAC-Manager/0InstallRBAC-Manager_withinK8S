@@ -1,0 +1,5 @@
+#In order to be able to create objects "RBACDefinition" within kubernets, you have to install RBAC-Manager deployment inside of Kubernetes cluster
+
+helm repo add fairwinds-stable https://charts.fairwinds.com/stable
+
+helm install fairwinds-stable/rbac-manager --name rbac-manager --namespace rbac-manager
